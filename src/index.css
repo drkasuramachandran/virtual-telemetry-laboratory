@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: "Archivo", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+    font-family: "Bricolage Grotesque", "Archivo", sans-serif;
+}
+
+.font-mono {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+code {
+    font-family: "IBM Plex Mono", monospace;
+}
+
+@layer base {
+    :root {
+        --background: 210 33% 98%;
+        --foreground: 216 40% 12%;
+        --card: 0 0% 100%;
+        --card-foreground: 216 40% 12%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 216 40% 12%;
+        --primary: 168 74% 36%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 210 26% 92%;
+        --secondary-foreground: 216 40% 16%;
+        --muted: 210 26% 93%;
+        --muted-foreground: 216 12% 42%;
+        --accent: 30 90% 46%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 72% 48%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 214 22% 86%;
+        --input: 214 22% 86%;
+        --ring: 168 74% 36%;
+        --chart-1: 168 74% 40%;
+        --chart-2: 199 85% 45%;
+        --chart-3: 30 90% 50%;
+        --chart-4: 280 60% 55%;
+        --chart-5: 0 72% 52%;
+        --radius: 0.6rem;
+    }
+
+    .dark {
+        --background: 216 40% 6%;
+        --foreground: 210 20% 92%;
+        --card: 216 32% 9%;
+        --card-foreground: 210 20% 92%;
+        --popover: 216 34% 8%;
+        --popover-foreground: 210 20% 92%;
+        --primary: 168 76% 45%;
+        --primary-foreground: 216 45% 6%;
+        --secondary: 216 24% 15%;
+        --secondary-foreground: 210 20% 92%;
+        --muted: 216 22% 14%;
+        --muted-foreground: 214 14% 60%;
+        --accent: 38 92% 55%;
+        --accent-foreground: 216 45% 6%;
+        --destructive: 0 72% 51%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 216 24% 17%;
+        --input: 216 24% 17%;
+        --ring: 168 76% 45%;
+        --chart-1: 168 76% 45%;
+        --chart-2: 199 89% 55%;
+        --chart-3: 38 92% 55%;
+        --chart-4: 280 65% 65%;
+        --chart-5: 0 72% 55%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+.pipeline-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+.pipeline-scroll::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}
